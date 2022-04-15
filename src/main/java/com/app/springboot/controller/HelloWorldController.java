@@ -30,4 +30,14 @@ public class HelloWorldController {
     public ResponseEntity<Person> add(@RequestBody Person person){
         return new ResponseEntity<>(service.savePerson(person),HttpStatus.OK);
     }
+
+    @PostMapping("/create")
+    public ResponseEntity<List<Person>> create(){
+        Person person = new Person();
+        person.setName("oke");
+        person.setAge(10);
+        service.savePerson(person);
+        return new ResponseEntity<>(service.listPerson(),HttpStatus.OK);
+    }
+
 }
