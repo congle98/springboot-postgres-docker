@@ -15,11 +15,7 @@ public class HelloWorldController {
 
     @GetMapping
     public String helloWorld(){
-<<<<<<< Updated upstream
-        return "Công đẹp trai";
-=======
         return "Công đẹp trai 4534534";
->>>>>>> Stashed changes
     }
 
     @Autowired
