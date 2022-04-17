@@ -15,7 +15,7 @@ public class HelloWorldController {
 
     @GetMapping
     public String helloWorld(){
-        return "Công đẹp trai hihu";
+        return "Công đẹp trai higbfgdfhu";
     }
 
     @Autowired
