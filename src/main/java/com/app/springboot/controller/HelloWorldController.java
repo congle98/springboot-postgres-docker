@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -27,7 +28,16 @@ public class HelloWorldController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Person> add(@RequestBody Person person){
+    public ResponseEntity<Person> add(){
+        Person person = new Person();
+        person.setAge(10);
+        person.setName("Cong");
+        List<String> list = new ArrayList<>();
+        list.add("bo");
+        list.add("me");
+        list.add("chi");
+        list.add("anh");
+        person.setContactIds(list);
         return new ResponseEntity<>(service.savePerson(person),HttpStatus.OK);
     }
 
